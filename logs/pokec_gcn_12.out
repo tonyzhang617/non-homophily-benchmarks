@@ -1,0 +1,143 @@
+Namespace(cached=False, cpu=False, dataset='pokec', directed=False, display_step=25, dropout=0.5, epochs=500, gat_heads=8, gpr_alpha=0.1, hidden_channels=12, hops=1, jk_type='max', lp_alpha=0.1, lr=0.01, method='gcn', no_bn=False, num_layers=2, num_mlp_layers=1, print_prop=False, rand_split=False, rocauc=False, runs=5, sub_dataset='', train_prop=0.5, valid_prop=0.25, weight_decay=0.001)
+pokec
+num nodes 1632803 | num classes 2 | num node feats 65
+MODEL: GCN(
+  (convs): ModuleList(
+    (0): GCNConv(65, 12)
+    (1): GCNConv(12, 2)
+  )
+  (bns): ModuleList(
+    (0): BatchNorm1d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+)
+Epoch: 00, Loss: 0.8742, Train: 49.21%, Valid: 49.29%, Test: 49.34%, mean_epoch_time: 0.7116, total_time: 0.7116, 
+Epoch: 25, Loss: 0.6958, Train: 52.72%, Valid: 52.76%, Test: 52.74%, mean_epoch_time: 0.0492, total_time: 1.2790, 
+Epoch: 50, Loss: 0.6509, Train: 58.11%, Valid: 58.06%, Test: 58.13%, mean_epoch_time: 0.0361, total_time: 1.8422, 
+Epoch: 75, Loss: 0.6011, Train: 70.31%, Valid: 70.42%, Test: 70.31%, mean_epoch_time: 0.0317, total_time: 2.4097, 
+Epoch: 100, Loss: 0.5793, Train: 69.48%, Valid: 69.53%, Test: 69.55%, mean_epoch_time: 0.0295, total_time: 2.9765, 
+Epoch: 125, Loss: 0.5722, Train: 63.53%, Valid: 63.54%, Test: 63.55%, mean_epoch_time: 0.0281, total_time: 3.5452, 
+Epoch: 150, Loss: 0.5672, Train: 73.29%, Valid: 73.32%, Test: 73.41%, mean_epoch_time: 0.0272, total_time: 4.1145, 
+Epoch: 175, Loss: 0.5612, Train: 73.49%, Valid: 73.56%, Test: 73.63%, mean_epoch_time: 0.0266, total_time: 4.6817, 
+Epoch: 200, Loss: 0.5584, Train: 72.89%, Valid: 73.00%, Test: 73.08%, mean_epoch_time: 0.0261, total_time: 5.2485, 
+Epoch: 225, Loss: 0.5556, Train: 71.30%, Valid: 71.39%, Test: 71.44%, mean_epoch_time: 0.0257, total_time: 5.8174, 
+Epoch: 250, Loss: 0.5597, Train: 72.56%, Valid: 72.64%, Test: 72.75%, mean_epoch_time: 0.0254, total_time: 6.3860, 
+Epoch: 275, Loss: 0.5520, Train: 71.97%, Valid: 72.02%, Test: 72.01%, mean_epoch_time: 0.0252, total_time: 6.9574, 
+Epoch: 300, Loss: 0.5494, Train: 74.20%, Valid: 74.27%, Test: 74.31%, mean_epoch_time: 0.0250, total_time: 7.5333, 
+Epoch: 325, Loss: 0.5467, Train: 74.05%, Valid: 74.17%, Test: 74.12%, mean_epoch_time: 0.0249, total_time: 8.1058, 
+Epoch: 350, Loss: 0.5459, Train: 74.24%, Valid: 74.34%, Test: 74.30%, mean_epoch_time: 0.0247, total_time: 8.6776, 
+Epoch: 375, Loss: 0.5456, Train: 73.54%, Valid: 73.68%, Test: 73.69%, mean_epoch_time: 0.0246, total_time: 9.2483, 
+Epoch: 400, Loss: 0.5425, Train: 73.65%, Valid: 73.79%, Test: 73.82%, mean_epoch_time: 0.0245, total_time: 9.8184, 
+Epoch: 425, Loss: 0.5427, Train: 66.99%, Valid: 66.97%, Test: 66.99%, mean_epoch_time: 0.0244, total_time: 10.3889, 
+Epoch: 450, Loss: 0.5397, Train: 74.60%, Valid: 74.69%, Test: 74.68%, mean_epoch_time: 0.0243, total_time: 10.9600, 
+Epoch: 475, Loss: 0.5408, Train: 65.12%, Valid: 65.10%, Test: 65.08%, mean_epoch_time: 0.0242, total_time: 11.5313, 
+Run 01:
+Highest Train: 74.76
+Highest Valid: 74.84
+  Final Train: 74.76
+   Final Test: 74.83
+Epoch: 00, Loss: 0.7090, Train: 50.15%, Valid: 50.37%, Test: 50.25%, mean_epoch_time: 0.0413, total_time: 0.0413, 
+Epoch: 25, Loss: 0.6806, Train: 56.59%, Valid: 56.67%, Test: 56.53%, mean_epoch_time: 0.0236, total_time: 0.6127, 
+Epoch: 50, Loss: 0.6345, Train: 59.19%, Valid: 59.39%, Test: 59.29%, mean_epoch_time: 0.0232, total_time: 1.1835, 
+Epoch: 75, Loss: 0.5909, Train: 53.89%, Valid: 54.10%, Test: 53.96%, mean_epoch_time: 0.0231, total_time: 1.7537, 
+Epoch: 100, Loss: 0.5730, Train: 70.62%, Valid: 70.68%, Test: 70.67%, mean_epoch_time: 0.0230, total_time: 2.3248, 
+Epoch: 125, Loss: 0.5674, Train: 70.75%, Valid: 70.84%, Test: 70.83%, mean_epoch_time: 0.0230, total_time: 2.8973, 
+Epoch: 150, Loss: 0.5605, Train: 66.66%, Valid: 66.53%, Test: 66.52%, mean_epoch_time: 0.0230, total_time: 3.4688, 
+Epoch: 175, Loss: 0.5578, Train: 73.54%, Valid: 73.48%, Test: 73.55%, mean_epoch_time: 0.0230, total_time: 4.0407, 
+Epoch: 200, Loss: 0.5634, Train: 57.62%, Valid: 57.78%, Test: 57.76%, mean_epoch_time: 0.0229, total_time: 4.6114, 
+Epoch: 225, Loss: 0.5515, Train: 73.85%, Valid: 73.82%, Test: 73.88%, mean_epoch_time: 0.0229, total_time: 5.1815, 
+Epoch: 250, Loss: 0.5484, Train: 74.26%, Valid: 74.23%, Test: 74.29%, mean_epoch_time: 0.0229, total_time: 5.7532, 
+Epoch: 275, Loss: 0.5470, Train: 73.24%, Valid: 73.24%, Test: 73.26%, mean_epoch_time: 0.0229, total_time: 6.3238, 
+Epoch: 300, Loss: 0.5455, Train: 73.29%, Valid: 73.25%, Test: 73.28%, mean_epoch_time: 0.0229, total_time: 6.8966, 
+Epoch: 325, Loss: 0.5434, Train: 74.00%, Valid: 73.92%, Test: 73.95%, mean_epoch_time: 0.0229, total_time: 7.4671, 
+Epoch: 350, Loss: 0.6227, Train: 59.45%, Valid: 59.68%, Test: 59.58%, mean_epoch_time: 0.0229, total_time: 8.0384, 
+Epoch: 375, Loss: 0.5574, Train: 61.95%, Valid: 62.12%, Test: 61.99%, mean_epoch_time: 0.0229, total_time: 8.6071, 
+Epoch: 400, Loss: 0.5458, Train: 74.23%, Valid: 74.20%, Test: 74.22%, mean_epoch_time: 0.0229, total_time: 9.1779, 
+Epoch: 425, Loss: 0.5449, Train: 74.21%, Valid: 74.08%, Test: 74.16%, mean_epoch_time: 0.0229, total_time: 9.7476, 
+Epoch: 450, Loss: 0.5434, Train: 72.94%, Valid: 72.87%, Test: 72.93%, mean_epoch_time: 0.0229, total_time: 10.3176, 
+Epoch: 475, Loss: 0.5427, Train: 74.57%, Valid: 74.50%, Test: 74.58%, mean_epoch_time: 0.0229, total_time: 10.8902, 
+Run 02:
+Highest Train: 74.67
+Highest Valid: 74.60
+  Final Train: 74.67
+   Final Test: 74.71
+Epoch: 00, Loss: 0.8027, Train: 49.11%, Valid: 49.13%, Test: 49.18%, mean_epoch_time: 0.0416, total_time: 0.0416, 
+Epoch: 25, Loss: 0.6916, Train: 56.44%, Valid: 56.38%, Test: 56.32%, mean_epoch_time: 0.0234, total_time: 0.6090, 
+Epoch: 50, Loss: 0.6614, Train: 54.90%, Valid: 54.82%, Test: 54.95%, mean_epoch_time: 0.0230, total_time: 1.1733, 
+Epoch: 75, Loss: 0.6122, Train: 55.75%, Valid: 55.61%, Test: 55.69%, mean_epoch_time: 0.0229, total_time: 1.7439, 
+Epoch: 100, Loss: 0.5851, Train: 66.80%, Valid: 66.88%, Test: 66.83%, mean_epoch_time: 0.0229, total_time: 2.3086, 
+Epoch: 125, Loss: 0.5716, Train: 72.93%, Valid: 72.95%, Test: 72.93%, mean_epoch_time: 0.0228, total_time: 2.8742, 
+Epoch: 150, Loss: 0.5641, Train: 72.70%, Valid: 72.82%, Test: 72.83%, mean_epoch_time: 0.0228, total_time: 3.4401, 
+Epoch: 175, Loss: 0.5583, Train: 71.69%, Valid: 71.79%, Test: 71.77%, mean_epoch_time: 0.0228, total_time: 4.0124, 
+Epoch: 200, Loss: 0.5545, Train: 72.71%, Valid: 72.69%, Test: 72.67%, mean_epoch_time: 0.0228, total_time: 4.5789, 
+Epoch: 225, Loss: 0.5506, Train: 72.37%, Valid: 72.50%, Test: 72.48%, mean_epoch_time: 0.0228, total_time: 5.1451, 
+Epoch: 250, Loss: 0.5487, Train: 74.18%, Valid: 74.29%, Test: 74.25%, mean_epoch_time: 0.0228, total_time: 5.7127, 
+Epoch: 275, Loss: 0.5467, Train: 74.36%, Valid: 74.41%, Test: 74.40%, mean_epoch_time: 0.0228, total_time: 6.2848, 
+Epoch: 300, Loss: 0.5429, Train: 72.20%, Valid: 72.30%, Test: 72.26%, mean_epoch_time: 0.0228, total_time: 6.8576, 
+Epoch: 325, Loss: 0.5418, Train: 72.08%, Valid: 72.02%, Test: 72.14%, mean_epoch_time: 0.0228, total_time: 7.4296, 
+Epoch: 350, Loss: 0.5403, Train: 74.48%, Valid: 74.49%, Test: 74.49%, mean_epoch_time: 0.0228, total_time: 8.0006, 
+Epoch: 375, Loss: 0.5402, Train: 66.57%, Valid: 66.65%, Test: 66.67%, mean_epoch_time: 0.0228, total_time: 8.5735, 
+Epoch: 400, Loss: 0.5407, Train: 61.56%, Valid: 61.40%, Test: 61.54%, mean_epoch_time: 0.0228, total_time: 9.1449, 
+Epoch: 425, Loss: 0.5437, Train: 57.99%, Valid: 57.85%, Test: 58.03%, mean_epoch_time: 0.0228, total_time: 9.7115, 
+Epoch: 450, Loss: 0.5378, Train: 74.49%, Valid: 74.57%, Test: 74.53%, mean_epoch_time: 0.0228, total_time: 10.2828, 
+Epoch: 475, Loss: 0.5355, Train: 74.66%, Valid: 74.68%, Test: 74.69%, mean_epoch_time: 0.0228, total_time: 10.8561, 
+Run 03:
+Highest Train: 74.87
+Highest Valid: 74.91
+  Final Train: 74.87
+   Final Test: 74.93
+Epoch: 00, Loss: 0.7891, Train: 49.28%, Valid: 49.25%, Test: 49.25%, mean_epoch_time: 0.0415, total_time: 0.0415, 
+Epoch: 25, Loss: 0.6820, Train: 49.92%, Valid: 49.93%, Test: 49.95%, mean_epoch_time: 0.0234, total_time: 0.6075, 
+Epoch: 50, Loss: 0.6495, Train: 66.18%, Valid: 66.13%, Test: 66.08%, mean_epoch_time: 0.0230, total_time: 1.1727, 
+Epoch: 75, Loss: 0.6134, Train: 62.16%, Valid: 62.22%, Test: 62.04%, mean_epoch_time: 0.0229, total_time: 1.7391, 
+Epoch: 100, Loss: 0.5863, Train: 59.99%, Valid: 60.09%, Test: 59.92%, mean_epoch_time: 0.0229, total_time: 2.3085, 
+Epoch: 125, Loss: 0.5779, Train: 67.38%, Valid: 67.41%, Test: 67.45%, mean_epoch_time: 0.0228, total_time: 2.8770, 
+Epoch: 150, Loss: 0.5638, Train: 64.54%, Valid: 64.67%, Test: 64.54%, mean_epoch_time: 0.0228, total_time: 3.4503, 
+Epoch: 175, Loss: 0.5559, Train: 69.99%, Valid: 70.12%, Test: 69.99%, mean_epoch_time: 0.0228, total_time: 4.0211, 
+Epoch: 200, Loss: 0.5539, Train: 65.70%, Valid: 65.83%, Test: 65.71%, mean_epoch_time: 0.0228, total_time: 4.5903, 
+Epoch: 225, Loss: 0.5625, Train: 67.59%, Valid: 67.57%, Test: 67.62%, mean_epoch_time: 0.0228, total_time: 5.1618, 
+Epoch: 250, Loss: 0.5480, Train: 74.19%, Valid: 74.33%, Test: 74.21%, mean_epoch_time: 0.0228, total_time: 5.7342, 
+Epoch: 275, Loss: 0.5461, Train: 73.69%, Valid: 73.85%, Test: 73.69%, mean_epoch_time: 0.0229, total_time: 6.3081, 
+Epoch: 300, Loss: 0.5438, Train: 73.77%, Valid: 73.87%, Test: 73.86%, mean_epoch_time: 0.0229, total_time: 6.8783, 
+Epoch: 325, Loss: 0.5437, Train: 74.35%, Valid: 74.45%, Test: 74.37%, mean_epoch_time: 0.0229, total_time: 7.4500, 
+Epoch: 350, Loss: 0.5406, Train: 72.27%, Valid: 72.44%, Test: 72.32%, mean_epoch_time: 0.0229, total_time: 8.0252, 
+Epoch: 375, Loss: 0.5425, Train: 72.04%, Valid: 72.10%, Test: 72.11%, mean_epoch_time: 0.0229, total_time: 8.5979, 
+Epoch: 400, Loss: 0.5528, Train: 65.70%, Valid: 65.66%, Test: 65.69%, mean_epoch_time: 0.0229, total_time: 9.1723, 
+Epoch: 425, Loss: 0.5387, Train: 72.92%, Valid: 73.00%, Test: 73.02%, mean_epoch_time: 0.0229, total_time: 9.7468, 
+Epoch: 450, Loss: 0.5374, Train: 73.95%, Valid: 74.15%, Test: 74.02%, mean_epoch_time: 0.0229, total_time: 10.3219, 
+Epoch: 475, Loss: 0.5367, Train: 74.28%, Valid: 74.49%, Test: 74.33%, mean_epoch_time: 0.0229, total_time: 10.8971, 
+Run 04:
+Highest Train: 74.80
+Highest Valid: 74.92
+  Final Train: 74.80
+   Final Test: 74.87
+Epoch: 00, Loss: 1.1092, Train: 48.81%, Valid: 48.74%, Test: 48.78%, mean_epoch_time: 0.0414, total_time: 0.0414, 
+Epoch: 25, Loss: 0.7072, Train: 49.35%, Valid: 49.25%, Test: 49.30%, mean_epoch_time: 0.0237, total_time: 0.6156, 
+Epoch: 50, Loss: 0.6929, Train: 53.22%, Valid: 53.27%, Test: 53.19%, mean_epoch_time: 0.0233, total_time: 1.1906, 
+Epoch: 75, Loss: 0.6676, Train: 53.82%, Valid: 53.74%, Test: 53.61%, mean_epoch_time: 0.0232, total_time: 1.7652, 
+Epoch: 100, Loss: 0.6307, Train: 63.18%, Valid: 63.07%, Test: 62.99%, mean_epoch_time: 0.0232, total_time: 2.3386, 
+Epoch: 125, Loss: 0.6001, Train: 69.38%, Valid: 69.38%, Test: 69.27%, mean_epoch_time: 0.0231, total_time: 2.9118, 
+Epoch: 150, Loss: 0.5873, Train: 72.31%, Valid: 72.27%, Test: 72.22%, mean_epoch_time: 0.0231, total_time: 3.4859, 
+Epoch: 175, Loss: 0.5815, Train: 72.20%, Valid: 72.20%, Test: 72.11%, mean_epoch_time: 0.0231, total_time: 4.0603, 
+Epoch: 200, Loss: 0.5933, Train: 57.02%, Valid: 56.95%, Test: 56.90%, mean_epoch_time: 0.0231, total_time: 4.6337, 
+Epoch: 225, Loss: 0.5737, Train: 73.21%, Valid: 73.20%, Test: 73.15%, mean_epoch_time: 0.0230, total_time: 5.2077, 
+Epoch: 250, Loss: 0.5701, Train: 72.67%, Valid: 72.64%, Test: 72.56%, mean_epoch_time: 0.0230, total_time: 5.7818, 
+Epoch: 275, Loss: 0.5676, Train: 73.42%, Valid: 73.44%, Test: 73.37%, mean_epoch_time: 0.0230, total_time: 6.3579, 
+Epoch: 300, Loss: 0.5641, Train: 68.49%, Valid: 68.54%, Test: 68.44%, mean_epoch_time: 0.0230, total_time: 6.9311, 
+Epoch: 325, Loss: 0.5600, Train: 69.52%, Valid: 69.47%, Test: 69.38%, mean_epoch_time: 0.0230, total_time: 7.5073, 
+Epoch: 350, Loss: 0.5582, Train: 73.01%, Valid: 73.04%, Test: 72.99%, mean_epoch_time: 0.0230, total_time: 8.0812, 
+Epoch: 375, Loss: 0.5549, Train: 70.75%, Valid: 70.79%, Test: 70.75%, mean_epoch_time: 0.0230, total_time: 8.6557, 
+Epoch: 400, Loss: 0.5539, Train: 73.86%, Valid: 73.83%, Test: 73.83%, mean_epoch_time: 0.0230, total_time: 9.2342, 
+Epoch: 425, Loss: 0.5519, Train: 73.84%, Valid: 73.79%, Test: 73.79%, mean_epoch_time: 0.0230, total_time: 9.8092, 
+Epoch: 450, Loss: 0.5510, Train: 72.34%, Valid: 72.36%, Test: 72.30%, mean_epoch_time: 0.0230, total_time: 10.3862, 
+Epoch: 475, Loss: 0.5499, Train: 72.27%, Valid: 72.24%, Test: 72.24%, mean_epoch_time: 0.0230, total_time: 10.9610, 
+Run 05:
+Highest Train: 74.50
+Highest Valid: 74.46
+  Final Train: 74.50
+   Final Test: 74.47
+All runs:
+Highest Train: 74.72 ± 0.14
+Highest Valid: 74.74 ± 0.21
+  Final Train: 74.72 ± 0.15
+   Final Test: 74.76 ± 0.18
+Saving results to results/pokec.csv

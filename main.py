@@ -1,6 +1,7 @@
 import argparse
 import sys
 import os
+import time
 import numpy as np
 import torch
 import torch.nn as nn
@@ -124,8 +125,12 @@ for run in range(args.runs):
     model.reset_parameters()
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     best_val = float('-inf')
+    durations = []
     for epoch in range(args.epochs):
         model.train()
+
+        ts = time.time()
+
         optimizer.zero_grad()
         out = model(dataset)
         if args.rocauc or args.dataset in ('yelp-chi', 'twitch-e', 'ogbn-proteins'):
@@ -143,6 +148,8 @@ for run in range(args.runs):
         loss.backward()
         optimizer.step()
 
+        durations.append(time.time() - ts)
+
         result = evaluate(model, dataset, split_idx, eval_func)
         logger.add_result(run, result[:-1])
 
@@ -158,7 +165,9 @@ for run in range(args.runs):
                   f'Loss: {loss:.4f}, '
                   f'Train: {100 * result[0]:.2f}%, '
                   f'Valid: {100 * result[1]:.2f}%, '
-                  f'Test: {100 * result[2]:.2f}%')
+                  f'Test: {100 * result[2]:.2f}%, '
+                  f'mean_epoch_time: {np.mean(durations):.4f}, '
+                  f'total_time: {np.sum(durations):.4f}, ')
             if args.print_prop:
                 pred = out.argmax(dim=-1, keepdim=True)
                 print("Predicted proportions:", pred.unique(return_counts=True)[1].float()/pred.shape[0])
